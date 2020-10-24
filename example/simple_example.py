@@ -8,10 +8,10 @@ led_colour=[(255,255,0)]*360
 print led_colour
 
 #to use simulator
-#client = opc.Client('localhost:7890')
+client = opc.Client('localhost:7890')
 
 #to use actual leds
-client = opc.Client('192.168.2.1:7890')
+#client = opc.Client('192.168.2.1:7890')
 
 client.put_pixels(led_colour)
 #need to send it twice if not constantly sending values 
