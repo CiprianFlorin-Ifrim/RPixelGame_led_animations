@@ -5,8 +5,7 @@ client = opc.Client('localhost:7890')
 led_colour = [(255,255,255)]*360
 
 #LOGO
-logo = """
-                  _
+logo = """        _
     _            /_\            _
     |`-.___,.-~'`|=|`'~-.,___,-'|
     |  __________|=|__________  |
@@ -38,16 +37,14 @@ logo = """
                  \|/                  
                   V                  
 """
-
 print(logo)
-
 #HEALTH SYSTEM
 total_hp = 300
 remaining_hp = int()
 
-        
+      
 while total_hp > 0:
-    #HEALTH TO LED TRANSLATION
+    #HEALTH TO LED TRANSLATION 
     if (total_hp <= 300 and total_hp > 275):
         #-------------------------------------------- F I R S T    H E A R T -------------------------------------------------    
          #SIXTH ROW
@@ -3221,7 +3218,14 @@ while total_hp > 0:
         #need to send it twice if not constantly sending values 
         #due to interpolation setting on fadecandy
         client.put_pixels(led_colour)
+#---------------------------------------------------END OF HEALTH TRANSLATION-------------------------------------------------
 
+#BOSS SYSTEM
+
+    
+
+
+#WEAPONS MENU
     weapons_menu = """
         _____________________
        |                     |
@@ -3233,9 +3237,10 @@ while total_hp > 0:
        | Zora Sword          |
        | Torch               |
        |_____________________|
-    """
-  
+    """ 
     print(weapons_menu)
+    
+#INPUT SYSTEM
     print('Health: ', total_hp)
     raw_menu = input("You choice of weapon: ")
     menu = int(raw_menu)
@@ -3245,7 +3250,7 @@ while total_hp > 0:
         remaining_hp = total_hp - 50
         total_hp = remaining_hp
     elif (menu == 2):
-        print("\n You chose the BOOMERANG and dealt 15 damage! \n"  )
+        print("\n You chose the BOOMERANG and dealt 15 damage! \n")
         remaining_hp = total_hp - 15
         total_hp = remaining_hp
     elif (menu == 3):
@@ -3268,7 +3273,7 @@ while total_hp > 0:
     elif (menu > 5):
         print('\n No weapon available in that slot \n')
 
-
+#HEALTH FULLY DEPLETED
 #-------------------------------------------- F I R S T    H E A R T -------------------------------------------------    
 #SIXTH ROW
 led_colour[308]=(0,0,0)
@@ -3528,10 +3533,10 @@ led_colour[54]=(90, 90, 100)
 led_colour[55]=(90, 90, 100)
 led_colour[56]=(90, 90, 100)
 led_colour[57]=(0,0,0)
+
 client.put_pixels(led_colour)
-#need to send it twice if not constantly sending values 
-#due to interpolation setting on fadecandy
 client.put_pixels(led_colour)
+
 print("\n Congratulations, you completed the game! \n")         
 
 
