@@ -13,7 +13,10 @@ Everytime a boss has been defeated and new boss is selected, the player's health
 There are different animations and sounds based on the activities happening in the game, all visible through the OPC simulator.
 
 
+NOTE: IN THE DEMO VIDEO, THE SOUNDS FOR THE GAME ARE NOT RECORDED BY ZOOM (for some reason)!
+
 CHANGELOG:
+
 Version 0.1:
 - created .py file 
 - added backgroud and defined LED positions for 1 heart
