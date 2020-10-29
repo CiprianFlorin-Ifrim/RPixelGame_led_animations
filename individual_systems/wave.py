@@ -7,11 +7,19 @@ client = opc.Client('localhost:7890')
 s = 1.0
 v = 1.0
 pixels = []
+led_colour = [(255,255,255)]*360
 
 
 for hue in range(360):
+    rgb_fractional = colorsys.hsv_to_rgb(hue/360.0, s, v)
+    print(rgb_fractional)
     
-    rgb = (255,255,255) 
+    r_float = rgb_fractional[0]
+    g_float = rgb_fractional[1]
+    b_float = rgb_fractional[2]
+    
+    
+    rgb = (r_float*255, g_float*225, b_float*255)
     pixels.append(rgb)
 
 

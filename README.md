@@ -1,19 +1,22 @@
 
 README file for Phyton LED Assesment
 
-My project consists in a small Zelda game with CMD and OPS as the user interface.
-The user has to fight 5 randomly chosen bosses from a dictionary(lore friendly) with a selection of 12 weapons(lore friendly) that deal different damage.
+My project consists in a small Zelda game with CMD and OPC as the user interface.
+The user has to fight 5 randomly chosen bosses from a dictionary(lore friendly) with a selection of 12 weapons(lore friendly) that deal different amount of damage.
+Besides damage, every weapon also has a "durability" value, if a weapon is used too much, the weapon breaks and cannot be used again.
+The idea is that the player has to decide the best use case scenario for the weapons available and the remaining player health.
 It is a turn based game, so everytime the user ends the turn and does damage, the boss will do damage to the player aswell.
-The weapon selection screen is displyed with the CMD window, while the player's health is displayed on the OPS simulator. 
-Total health 300, repressented by 3 hearths, the bosses have specific health between 200 and 500 and deal between 0-25 damage every turn(randomly generated).
+The weapon selection screen is displyed with the CMD window, while the player's health is displayed on the OPC simulator. 
+Total health 300, repressented by 3 hearths, every quarter is 25HP. The bosses have specific health between 200 and 500 and deal between 10-25 damage every turn(randomly generated).
 To win the game the player has to kill all 5 bosses with the 300 health available, otherwise it's GAME OVER!
-There are different animations based on the activities happening in the game, all visible through the OPS simulator.
+Everytime a boss has been defeated and new boss is selected, the player's health is restored back to 300HP. BUT NOT THE WEAPON DURABILITY!
+There are different animations and sounds based on the activities happening in the game, all visible through the OPC simulator.
 
 
 CHANGELOG:
 Version 0.1:
 - created .py file 
-- added backgroud and defined LED positions for 1 hearth
+- added backgroud and defined LED positions for 1 heart
 
 Version 0.2:
 - created 3 distinct hearts 
@@ -55,6 +58,7 @@ Version 0.5:
 - added more items to the interface using the print function for more clarity
 
 Version 0.6:
+- added separate branch on Codelabs to test individual systems
 - new boss system code:
          - dictionary with different bosses 
 		 - health and name "generated" randomly from the dictionary
@@ -83,18 +87,36 @@ Version 0.8:
 - added definitions to both the main code and individual systems to simply the code and reduce its length
 
 Version 0.9:
+- branch used for testing individual systems on Codelabs has been removed since it's not required anymore
 - transfered the code from boss system to the main code
-- fixed different bugs with the systems working with each otherwise
+- fixed different bugs with the systems not working with eachother 
 - added damage taken and boss health remaining information to the interface
 - improved the overall code look
-- added way more comments
-- added separate file for health number to health display transaltion
+- added more comments
+- added separate file that explains the health number to health display transaltion ("healthTranslation.txt")
 
-
-
-
-
-
+Version 1.0 (this is the one):
+- created new branch on Codelabs "old_version_working" representing the version 0.9 program
+- added durability feature for every weapon: weapons cannot be used forever now and players have to think of the best use case scenario
+- completetly reworked the weapons menu, better interface and now it is also showing the durability left for every weapon
+- balanced the turn based system so that the game is fair and fun based on the weapons' damage and durability available
+- added input checks: if the input is not a number the player would have to choose again, also if the input is too high inform user that no weapon is available in that slot
+- added sound library, now there's a sound playing when: taking damage, defeating a boss, winning the game, losing the game (played async with the animation)
+- added required files for the sound system in the master folder ("attack.wav", "bossclear.wav", "gameover.wav", "gamewon.wav")
+- added animation for when taking damage
+- added animation for when losing a full heart out of 3
+- added animation for when unlocking the secret weapon
+- added animation for when it's game over
+- added animation for when the game has been completed and won
+- divided every system and animation in a different definition and added checks for definition clashes in certain situations
+- better formatting of code
+- cleaned the code a bit, optimised, removed an additional 1000 lines of code
+- added way more comments, for almost all lines of code
+- spelling corrections
+- added secret message
+- added demo and explanation video inside the project's folder
+- added "OLD" folder where the previous versions of some of the individual systems are located
+- addded "individual_systems" folder to store the independent system .py files used during testing
 
 
 

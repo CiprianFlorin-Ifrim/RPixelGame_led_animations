@@ -1,0 +1,13 @@
+300 hp  = 3 0/4    hearts
+275 hp  = 2 3/4    hearts
+250 hp  = 2 2/4    hearts 
+225 hp  = 2 1/4    hearts
+200 hp  = 2 0/4    hearts
+175 hp  = 1 3/4    hearts
+150 hp  = 1 2/4    hearts
+125 hp  = 1 1/4    hearts
+100 hp  = 1 0/4    hearts
+ 75 hp  = 0 3/4    hearts
+ 50 hp  = 0 2/4    hearts    
+ 25 hp  = 0 1/4    hearts
+  0 hp  = 0 0/0    hearts
