@@ -1,5 +1,5 @@
 
-README file for Phyton LED Assesment
+README file for the python written RPG game using the OPC led simulator as interface.
 
 My project consists in a small Zelda game with CMD and OPC as the user interface.
 The user has to fight 5 randomly chosen bosses from a dictionary(lore friendly) with a selection of 12 weapons(lore friendly) that deal different amount of damage.
